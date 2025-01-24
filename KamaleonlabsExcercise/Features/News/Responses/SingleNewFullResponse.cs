@@ -1,6 +1,6 @@
-using KamaleonlabsExcercise.Features.News.Data;
+using KamaleonlabsExercise.Features.News.Data;
 
-namespace KamaleonlabsExcercise.Features.News.Responses;
+namespace KamaleonlabsExercise.Features.News.Responses;
 
 /// <summary>
 /// A response containing the full data of a <see cref="New"/>.

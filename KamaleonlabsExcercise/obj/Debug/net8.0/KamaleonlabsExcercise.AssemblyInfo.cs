@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("KamaleonlabsExcercise")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("KamaleonlabsExercise")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3fea1e8f477d536337040b227d17cede375e1c27")]
-[assembly: System.Reflection.AssemblyProductAttribute("KamaleonlabsExcercise")]
-[assembly: System.Reflection.AssemblyTitleAttribute("KamaleonlabsExcercise")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b31177d6f92d6d3c3734a24b40657f917f1ada81")]
+[assembly: System.Reflection.AssemblyProductAttribute("KamaleonlabsExercise")]
+[assembly: System.Reflection.AssemblyTitleAttribute("KamaleonlabsExercise")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Generado por la clase WriteCodeFragment de MSBuild.

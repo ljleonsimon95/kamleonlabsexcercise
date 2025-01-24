@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace KamaleonlabsExcercise.Migrations
+namespace KamaleonlabsExercise.Migrations
 {
     /// <inheritdoc />
     public partial class Initial : Migration

@@ -1,9 +1,9 @@
-using KamaleonlabsExcercise.Features.Shared;
+using KamaleonlabsExercise.Features.Shared;
 
-namespace KamaleonlabsExcercise.Features.News.Errors;
+namespace KamaleonlabsExercise.Features.News.Errors;
 
 /// <summary>
-///
+/// An error found when tere is no image of a given new. 
 /// </summary>
 public class NoFoundImageNewError() : ApplicationError("NO found image new.")
 {

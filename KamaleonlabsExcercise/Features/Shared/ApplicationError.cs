@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace KamaleonlabsExcercise.Features.Shared;
+namespace KamaleonlabsExercise.Features.Shared;
 
 /// <summary>
 /// Base class for errors thrown by the app

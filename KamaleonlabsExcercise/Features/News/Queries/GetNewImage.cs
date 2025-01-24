@@ -1,15 +1,29 @@
-using KamaleonlabsExcercise.AppDbContext;
-using KamaleonlabsExcercise.Features.News.Data;
-using KamaleonlabsExcercise.Features.News.Errors;
-using KamaleonlabsExcercise.Features.Shared;
+using KamaleonlabsExercise.AppDbContext;
+using KamaleonlabsExercise.Features.News.Data;
+using KamaleonlabsExercise.Features.News.Errors;
+using KamaleonlabsExercise.Features.Shared;
 using Microsoft.EntityFrameworkCore;
 
-namespace KamaleonlabsExcercise.Features.News.Queries;
+namespace KamaleonlabsExercise.Features.News.Queries;
 
+/// <summary>
+/// Payload for retrieving an image for a news item.
+/// </summary>
+/// <param name="NewId">The ID of the news item.</param>
 public sealed record GetImageNewPayload(int NewId);
 
-public interface IGetNewImageHandler : IUseCase<GetImageNewPayload, string>;
+/// <summary>
+/// Interface for handling the get new image use case.
+/// </summary>
+/// <remarks>This use case encapsulates the logic for retrieving the image associated with a news item.</remarks>
+public interface IGetNewImageHandler : IUseCase<GetImageNewPayload, string>
+{
+}
 
+/// <summary>
+/// 
+/// </summary>
+/// <param name="context"></param>
 [CommandHandler]
 public class GetNewImageHandler(NewsDbContext context) : IGetNewImageHandler
 {

@@ -1,12 +1,12 @@
-using KamaleonlabsExcercise.AppDbContext;
-using KamaleonlabsExcercise.Features.News.Handlers;
-using KamaleonlabsExcercise.Features.News.Queries;
-using KamaleonlabsExcercise.Features.News.Responses;
-using KamaleonlabsExcercise.Features.Shared;
+using KamaleonlabsExercise.AppDbContext;
+using KamaleonlabsExercise.Features.News.Handlers;
+using KamaleonlabsExercise.Features.News.Queries;
+using KamaleonlabsExercise.Features.News.Responses;
+using KamaleonlabsExercise.Features.Shared;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace KamaleonlabsExcercise.Features.News.Controllers;
+namespace KamaleonlabsExercise.Features.News.Controllers;
 
 [ApiController]
 [Route("news")]
@@ -270,6 +270,13 @@ public class NewsController(ILogger<NewsController> logger) : ControllerBase
         return Problem();
     }
 
+    /// <summary>
+    /// Retrieves the full data of all news items.
+    /// </summary>
+    /// <param name="getNewsHandler">Handler to get the full data for all news items</param>
+    /// <param name="context">Database context</param>
+    /// <param name="token">Cancellation token</param>
+    /// <returns>The full data of all news items if successful, NoContent if the operation was cancelled, or Problem if an exception occurs</returns>
     [HttpGet("all")]
     public async Task<IActionResult> GetAllNews(
         [FromServices] IGetNewsHandler getNewsHandler,

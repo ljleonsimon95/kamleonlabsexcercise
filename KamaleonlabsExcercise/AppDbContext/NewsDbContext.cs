@@ -1,7 +1,7 @@
-using KamaleonlabsExcercise.Features.News.Data;
+using KamaleonlabsExercise.Features.News.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace KamaleonlabsExcercise.AppDbContext;
+namespace KamaleonlabsExercise.AppDbContext;
 
 public class NewsDbContext : DbContext
 {
@@ -9,5 +9,5 @@ public class NewsDbContext : DbContext
     {
     }
 
-    public DbSet<New> News { get; set; }
+    public virtual DbSet<New> News { get; set; }
 }

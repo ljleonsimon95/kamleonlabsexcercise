@@ -1,13 +1,20 @@
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace KamaleonlabsExcercise.Features.Shared;
+namespace KamaleonlabsExercise.Features.Shared;
 
+/// <summary>
+/// FileUploadSchemaFilter modifies the OpenApiOperation to include file upload capability.
+/// </summary>
 public class FileUploadSchemaFilter : IOperationFilter
 {
+    /// <summary>
+    /// Applies the filter to the specified OpenApiOperation, adding support for IFormFile parameters.
+    /// </summary>
+    /// <param name="operation">The operation to modify.</param>
+    /// <param name="context">The filter context.</param>
     public void Apply(OpenApiOperation operation, OperationFilterContext context)
     {
-        // Verifica si el modelo tiene propiedades del tipo IFormFile
         var parametersWithIFormFile = context.MethodInfo.GetParameters()
             .SelectMany(p => p.ParameterType.GetProperties())
             .Where(p => p.PropertyType == typeof(IFormFile));
@@ -25,10 +32,9 @@ public class FileUploadSchemaFilter : IOperationFilter
                             Type = "object",
                             Properties = new Dictionary<string, OpenApiSchema>
                             {
-                                // Define las propiedades explícitamente
                                 ["File"] = new OpenApiSchema { Type = "string", Format = "binary" }
                             },
-                            Required = new HashSet<string> { } // Propiedades requeridas
+                            Required = new HashSet<string> { }
                         }
                     }
                 }

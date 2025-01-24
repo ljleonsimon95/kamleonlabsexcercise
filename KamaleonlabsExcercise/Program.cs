@@ -1,10 +1,10 @@
 using System.Reflection;
-using KamaleonlabsExcercise.AppDbContext;
-using KamaleonlabsExcercise.Features.Shared;
+using KamaleonlabsExercise.AppDbContext;
+using KamaleonlabsExercise.Features.Shared;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
-namespace KamaleonlabsExcercise
+namespace KamaleonlabsExercise
 {
     public class Program
     {
@@ -30,7 +30,7 @@ namespace KamaleonlabsExcercise
                     Title = "Kamaleonlabs",
                     Description = "News service",
                 });
-                options.OperationFilter<FileUploadSchemaFilter >(); // Agrega el filtro para IFormFile
+                options.OperationFilter<FileUploadSchemaFilter>(); 
             });
 
             var app = builder.Build();

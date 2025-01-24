@@ -1,4 +1,4 @@
-namespace KamaleonlabsExcercise.Features.Shared;
+namespace KamaleonlabsExercise.Features.Shared;
 
 /// <summary>
 /// An interface for describing an application use case.

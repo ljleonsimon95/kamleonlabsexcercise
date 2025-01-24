@@ -1,4 +1,4 @@
-namespace KamaleonlabsExcercise.Features.News.Data;
+namespace KamaleonlabsExercise.Features.News.Data;
 
 /// <summary>
 /// News entity
