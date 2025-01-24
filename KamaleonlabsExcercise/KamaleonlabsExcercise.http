@@ -1,0 +1,6 @@
+@KamaleonlabsExcercise_HostAddress = http://localhost:5274
+
+GET {{KamaleonlabsExcercise_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
