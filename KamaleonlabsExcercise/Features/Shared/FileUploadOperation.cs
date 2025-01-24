@@ -14,10 +14,6 @@ public class FileUploadSchemaFilter : IOperationFilter
 
         if (parametersWithIFormFile.Any())
         {
-            // Limpia parámetros preexistentes si los hay
-            operation.Parameters.Clear();
-
-            // Configura el body como "multipart/form-data"
             operation.RequestBody = new OpenApiRequestBody
             {
                 Content = new Dictionary<string, OpenApiMediaType>
@@ -30,11 +26,9 @@ public class FileUploadSchemaFilter : IOperationFilter
                             Properties = new Dictionary<string, OpenApiSchema>
                             {
                                 // Define las propiedades explícitamente
-                                ["Title"] = new OpenApiSchema { Type = "string" },
-                                ["Body"] = new OpenApiSchema { Type = "string" },
                                 ["File"] = new OpenApiSchema { Type = "string", Format = "binary" }
                             },
-                            Required = new HashSet<string> { "Title"} // Propiedades requeridas
+                            Required = new HashSet<string> { } // Propiedades requeridas
                         }
                     }
                 }
