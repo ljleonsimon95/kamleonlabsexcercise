@@ -12,7 +12,7 @@ public class AddNewBasicPayload
     public IFormFile? File { get; set; }
 };
 
-// public sealed record AddNewPayload(AddNewBasicPayload Basic, IFormFile file);
+public sealed record AddNewPayload(string test);
 
 public interface IAddNewHandler : IUseCase<AddNewBasicPayload, New>;
 

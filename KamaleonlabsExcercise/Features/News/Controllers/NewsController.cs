@@ -16,17 +16,16 @@ public class NewsController(ILogger<NewsController> logger) : ControllerBase
         [FromServices] IAddNewHandler addNewHandler,
         [FromServices] NewsDbContext context,
         [FromForm] AddNewBasicPayload payload,
-        // [FromForm] IFormFile file,
         CancellationToken token
     )
     {
         try
         {
             var result = await addNewHandler.HandleAsync(payload, token);
-            
+
             await context.SaveChangesAsync(token);
 
-            return Ok(1);
+            return Ok(result.Id);
         }
         catch (OperationCanceledException)
         {

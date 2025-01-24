@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KamaleonlabsExcercise")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+15f3148ead1d650445365589078469471c7a4db3")]
 [assembly: System.Reflection.AssemblyProductAttribute("KamaleonlabsExcercise")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KamaleonlabsExcercise")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
